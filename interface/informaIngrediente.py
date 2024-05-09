@@ -5,7 +5,7 @@ from tkinter import *
 def windowIA():
     app = Tk()
     app.title("Receitas Inteligentes")
-    app.geometry("500x300")
+    app.geometry("350x500")
     app.configure(background='#dde')
     Label(
         app,
