@@ -1,3 +1,5 @@
+from geracaoPDF.receita import geraReceita
+
 from tkinter import *
 import tkinter as tk
 
@@ -24,7 +26,7 @@ def windowIA(appOpcoes):
     botaoCalorias.configure(**estilo_botao)
     botaoCalorias.place(x=17, y=450, width=100, height=40)
 
-    botaoReceita = tk.Button(app, text="Gerar Receita", command=lambda: windowIA())
+    botaoReceita = tk.Button(app, text="Gerar Receita", command=lambda: geraReceita(txtIng.get("1.0", "end")))
     botaoReceita.configure(**estilo_botao)
     botaoReceita.place(x=122, y=450, width=120, height=40)
 
