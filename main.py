@@ -1,3 +1,3 @@
 from interface.opcoes import window
 
-window()
+window() 
