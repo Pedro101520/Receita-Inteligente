@@ -7,12 +7,15 @@ def voltar(app):
     app.destroy()
     window()
 
+def sair(app):
+    app.destroy()
+
 def window():
     app = Tk()
     app.title("Receitas Inteligentes")
     app.geometry("350x500")
 
-    backgroung = PhotoImage(file="D:/Biblioteca/Documents/Culinaria com IA/assets/img/cozinha.png")
+    backgroung = PhotoImage(file="assets/img/cozinha.png")
     background_label = Label(app, image=backgroung)
     background_label.place(x=0, y=0, relwidth=1, relheight=1)
 
@@ -22,11 +25,8 @@ def window():
     botaoReceita.configure(**estilo_botao)
     botaoReceita.place(x=115, y=370, width=120, height=40)
 
-    botaoDuvida = tk.Button(app, text="Duvida", command=lambda: windowIA())
-    botaoDuvida.configure(**estilo_botao)
-    botaoDuvida.place(x=115, y=420, width=120, height=40)
-
-    # Button(app, text="Sugerir receita", command=lambda: windowIA()).place(x=120, y=270, width=100, height=20)
-    # Button(app, text="Duvidas", command=lambda: windowIA()).place(x=200, y=270, width=100, height=20)
+    botaoSair = tk.Button(app, text="Sair", command=lambda: sair(app))
+    botaoSair.configure(**estilo_botao)
+    botaoSair.place(x=115, y=420, width=120, height=40)
 
     app.mainloop()
