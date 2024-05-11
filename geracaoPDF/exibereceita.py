@@ -6,7 +6,7 @@ def windowReceita(ingredientes):
     receita = exibeReceita(ingredientes)
 
     app = Tk()
-    app.title("Criação de Conta")
+    app.title("Receita")
     app.geometry("350x500")
     app.configure(background='#ffffff')
 

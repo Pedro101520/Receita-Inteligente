@@ -11,7 +11,7 @@ receita = ""
 def googleIA(ingredientes):
     global receita, calorias
 
-    GOOGLE_API_KEY="KEY API"
+    GOOGLE_API_KEY="Coloque sua API KEY aqui"
     genai.configure(api_key=GOOGLE_API_KEY)
     generation_config = {
         "candidate_count": 1,

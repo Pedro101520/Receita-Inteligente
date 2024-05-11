@@ -4,7 +4,12 @@ from reportlab.lib.styles import ParagraphStyle
 from tkinter import messagebox
 import re
 
+global numReceita
+numreceita = 1
+
 def geraReceita(receita):
+    global numreceita
+
     estilo_padrao = ParagraphStyle(
         "padrao",
         fontSize=12,
@@ -24,7 +29,10 @@ def geraReceita(receita):
 
     for paragrafo in paragrafos:
         conteudo.append(Paragraph(paragrafo, estilo_padrao))
+    
+    nomeArquivo = f"Receita {numreceita}.pdf"
+    numreceita += 1
 
-    pdf = SimpleDocTemplate("Receita.pdf", pagesize=letter)
+    pdf = SimpleDocTemplate(nomeArquivo, pagesize=letter)
     messagebox.showinfo("Aviso", "PDF da receita gerado!") 
     pdf.build(conteudo)
