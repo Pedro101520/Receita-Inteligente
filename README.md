@@ -1,6 +1,6 @@
 # 📖Receitas inteligentes
 
-Este projeto usa inteligência artificial para gerar receitas, de acordo com os ingredientes fornecidos pelo usuário
+Este projeto usa inteligência artificial para gerar receitas, de acordo com os ingredientes fornecidos pelo usuário, além de dar a opção de gerar um arquivo PDF, para compartilhar
 
 ## Ferramentas 🛠️
  - Pytyhon
